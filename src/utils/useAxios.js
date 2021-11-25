@@ -13,6 +13,7 @@ const useAxios = (url) => {
         const response = await axios.get(url);
         const posts = response.data;
         setPosts(posts);
+        setIsLoading(false);
       } catch (err) {
         err.message = "gagal mengambil data dari API";
         setIsError(err.message);
