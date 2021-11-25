@@ -7,6 +7,7 @@ import Category from "./Pages/Categories";
 import NotFound from "./Pages/404";
 
 // Components
+import CustomSwitch from "./Components/CustomSwitch";
 import Navbar from "./Components/layout/Navbar";
 import Home from "./Pages/Home";
 import Detail from "./Pages/Detail";
@@ -17,7 +18,7 @@ export default function App() {
     <>
       <Router>
         <Navbar />
-        <Switch>
+        <CustomSwitch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -40,7 +41,7 @@ export default function App() {
           <Route exact path="*">
             <NotFound />
           </Route>
-        </Switch>
+        </CustomSwitch>
       </Router>
     </>
   );

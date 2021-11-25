@@ -11,7 +11,6 @@ import ErrorMessage from "../error message/ErrorMessage";
 const BlogPage = ({ data, titleHeader, loading, error, query }) => {
   // Get Params Title from URL
   const { name } = useParams();
-  console.log(name);
 
   return (
     <Layout>
@@ -32,8 +31,8 @@ const BlogPage = ({ data, titleHeader, loading, error, query }) => {
                 <div className="text-center py-52">
                   <h2 className="text-5xl">sorry, data not found 😥</h2>
                 </div>
-                {loading = false}
-                </>
+                {(loading = false)}
+              </>
             ) : (
               <div className="text-center tracking-wide py-40">
                 <h2 className="text-5xl">No result 😥</h2>
