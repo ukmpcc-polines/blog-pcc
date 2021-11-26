@@ -15,7 +15,6 @@ const Home = () => {
   // const [start, setStart] = useState(6);
   let featuredPost;
 
-
   // Fetching Data Featured Post From API
   const { posts: featured } = useAxios(
     `${process.env.REACT_APP_API_URL}/posts?featured=true`
@@ -42,6 +41,7 @@ const Home = () => {
   //   setPosts([...posts, ...newPosts]);
   //   setStart(start + 6);
   // }
+
   return (
     <Layout>
       <title>PCC - Share Your Knowledge</title>

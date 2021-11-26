@@ -25,13 +25,13 @@ export default function Navbar() {
   function doSearch(e) {
     e.preventDefault();
     history.push({
-      pathname: '/search',
+      pathname: "/search",
       search: `?title=${keyword}`,
     });
   }
 
   return (
-    <nav className="h-24 py-6 font-patrick bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white overflow-hidden relative transition-all duration-500">
+    <nav className="h-24 py-6 font-patrick bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-white overflow-hidden relative transition-all duration-500">
       <div className="container mx-auto">
         <div className="flex items-center justify-center">
           <div className="w-3/12 flex justify-center md:hidden">
@@ -113,7 +113,7 @@ export default function Navbar() {
             </button>
           </div>
           <div
-            className={` w-full h-full bg-gray-100 z-10 dark:bg-gray-800 fixed left-0 py-5 px-10 md:w-6/12 md:static md:p-0 transition-all duration-500
+            className={` w-full h-full bg-gray-50 z-10 dark:bg-gray-800 fixed left-0 py-5 px-10 md:w-6/12 md:static md:p-0 transition-all duration-500
             ${offCanvas ? "top-0" : `-top-full`}
             `}
           >
@@ -140,7 +140,7 @@ export default function Navbar() {
             </button>
             <ul className="flex flex-col py-10 tracking-wide space-y-4 md:space-x-10 md:space-y-0 md:flex-row md:py-2 md:items-center text-lg z-50">
               <li className="text-gray-400 underline uppercase text-lg md:hidden">
-                Menu
+                Kategori
               </li>
               {categories.map((category, key) => {
                 return (
@@ -148,6 +148,7 @@ export default function Navbar() {
                     <Link
                       className="hover:underline capitalize"
                       to={`/category/${category.name}`}
+                      onClick={() => setOffCanvas(!offCanvas)}
                     >
                       {category.name}
                     </Link>
@@ -184,7 +185,7 @@ export default function Navbar() {
             </button>
             <form onSubmit={doSearch}>
               <input
-                className="md:rounded-full w-full rounded-lg bg-gray-300 dark:bg-gray-700 px-2 py-2 icon-search pl-8"
+                className="md:rounded-full w-full rounded-lg bg-gray-200 placeholder-gray-800 dark:bg-gray-700 dark:placeholder-gray-200  px-2 py-2 icon-search pl-8"
                 type="text"
                 name="search"
                 id="search"
