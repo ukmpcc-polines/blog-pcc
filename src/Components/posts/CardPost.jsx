@@ -12,7 +12,7 @@ const CardPost = ({ data }) => {
     <article className="py-6 border-b-2 border-gray-600 lg:border-0">
       <LazyLoadImage
         effect="blur"
-        className="rounded h-52 object-fill"
+        className="rounded lg:h-52 object-fill"
         src={data.thumbnail.formats.small.url}
         alt="thumbnail"
         placeholderSrc="https://via.placeholder.com/"
